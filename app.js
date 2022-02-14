@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const dbModel = require('./postSchema')
 const postId = "620a06c78bd4602c4806804f"
 
-const bot = new Composer()
+const bot = new Telegraf("5104428588:AAEZKDqJBzjdzP8_ZrOW_Etu1re54_VLP-A")
 
 //DB mail gejaho3293@rubygon.com pass: rps
 mongoose.connect('mongodb+srv://rasedul20:rasedul20@telegramproject.6rm9z.mongodb.net/telegramDB?retryWrites=true&w=majority',{useNewUrlParser:true,useUnifiedTopology:true}).catch((e)=>{
@@ -52,7 +52,7 @@ bot.hears('💰 Buy',ctx=>{
         if (e) {
             console.log(e)
         } else {
-            ctx.telegram.sendMessage(ctx.chat.id , data.buy ).catch('Something is wrong')
+            ctx.telegram.sendMessage(ctx.chat.id , data[0].buy ).catch('Something is wrong')
         }
     })
 
@@ -67,7 +67,7 @@ bot.command('buy',ctx=>{
         if (e) {
             console.log(e)
         } else {
-            ctx.telegram.sendMessage(ctx.chat.id , data.buy ).catch('Something is wrong')
+            ctx.telegram.sendMessage(ctx.chat.id , data[0].buy ).catch('Something is wrong')
         }
     })
 
@@ -83,7 +83,7 @@ bot.hears('⚙️ Tokenomics',ctx=>{
         if (e) {
             console.log(e)
         } else {
-            ctx.telegram.sendMessage(ctx.chat.id , data.token ).catch('Something is wrong')
+            ctx.telegram.sendMessage(ctx.chat.id , data[0].token ).catch('Something is wrong')
         }
     })
 
@@ -98,7 +98,7 @@ bot.command('tokenomics',ctx=>{
         if (e) {
             console.log(e)
         } else {
-            ctx.telegram.sendMessage(ctx.chat.id , data.token ).catch('Something is wrong')
+            ctx.telegram.sendMessage(ctx.chat.id , data[0].token ).catch('Something is wrong')
         }
     })
 
@@ -114,7 +114,7 @@ bot.hears('🌎 Website',ctx=>{
         if (e) {
             console.log(e)
         } else {
-            ctx.telegram.sendMessage(ctx.chat.id , data.web , {
+            ctx.telegram.sendMessage(ctx.chat.id , data[0].web , {
                 reply_markup:{
                     inline_keyboard:[
                         [{text: "Visit our website", url: "https://gravitymetaverse.io"}]
@@ -137,7 +137,7 @@ bot.command('website',ctx=>{
         if (e) {
             console.log(e)
         } else {
-            ctx.telegram.sendMessage(ctx.chat.id , data.web , {
+            ctx.telegram.sendMessage(ctx.chat.id , data[0].web , {
                 reply_markup:{
                     inline_keyboard:[
                         [{text: "Visit our website", url: "https://gravitymetaverse.io"}]
@@ -159,7 +159,7 @@ bot.hears('🚀 RoadMap',ctx=>{
         if (e) {
             console.log(e)
         } else {
-            ctx.telegram.sendMessage(ctx.chat.id , data.road ).catch('Something is wrong')
+            ctx.telegram.sendMessage(ctx.chat.id , data[0].road ).catch('Something is wrong')
         }
     })
 
@@ -174,7 +174,7 @@ bot.command('roadmap',ctx=>{
         if (e) {
             console.log(e)
         } else {
-            ctx.telegram.sendMessage(ctx.chat.id , data.road ).catch('Something is wrong')
+            ctx.telegram.sendMessage(ctx.chat.id , data[0].road ).catch('Something is wrong')
         }
     })
 
@@ -190,7 +190,7 @@ bot.hears('💵 Tax',ctx=>{
         if (e) {
             console.log(e)
         } else {
-            ctx.telegram.sendMessage(ctx.chat.id , data.tax ).catch('Something is wrong')
+            ctx.telegram.sendMessage(ctx.chat.id , data[0].tax ).catch('Something is wrong')
         }
     })
 
@@ -205,7 +205,7 @@ bot.command('tax',ctx=>{
         if (e) {
             console.log(e)
         } else {
-            ctx.telegram.sendMessage(ctx.chat.id , data.tax ).catch('Something is wrong')
+            ctx.telegram.sendMessage(ctx.chat.id , data[0].tax ).catch('Something is wrong')
         }
     })
 
@@ -220,7 +220,7 @@ bot.hears('📝 WhitePaper',ctx=>{
         if (e) {
             console.log(e)
         } else {
-            ctx.telegram.sendMessage(ctx.chat.id , data.white ).catch('Something is wrong')
+            ctx.telegram.sendMessage(ctx.chat.id , data[0].white ).catch('Something is wrong')
         }
     })
 
@@ -235,7 +235,7 @@ bot.command('whitepaper',ctx=>{
         if (e) {
             console.log(e)
         } else {
-            ctx.telegram.sendMessage(ctx.chat.id , data.white ).catch('Something is wrong')
+            ctx.telegram.sendMessage(ctx.chat.id , data[0].white ).catch('Something is wrong')
         }
     })
 
